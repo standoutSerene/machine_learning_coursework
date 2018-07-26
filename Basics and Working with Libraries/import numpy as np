@@ -1,0 +1,19 @@
+import numpy as np
+import matplotlib.pyplot as plt
+# Generate a Normal Distribution (1-D)
+
+u = 5
+sigma = 1
+
+
+vals = u + sigma * np.random.randn(1000)
+print(vals.shape)
+plt.hist(vals, 100)
+plt.show()
+
+# if we sample from a probability distribution, we will get more points which have higher probabs.
+# for histogram, data is divided into ranges
+# in a histogram, each range is a bucket, and on y-axis is the number of points in that bucket
+# 1000 is the number of points that I want to have
+# 100 is the number of buckets that I want to have
+# if we decerase the number of buckets, we'll see that the width of the bars will increase
